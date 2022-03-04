@@ -22,10 +22,20 @@ const TeamList = styled.ul``;
 
 const Team = styled.li`
     background-color:  white;
-    color:${(props)=>props.theme.mainColor};
     margin-bottom: 10px;
     border-radius: 15px;
-    padding:20px;
+    transition: background-color 0.2s ease-in-out;
+    a{
+        padding:20px;
+        transition: color 0.2s ease-in-out;
+        display: block;
+    }
+    &:hover{
+        a{
+            color:white;
+        }
+        background-color:${(props)=>props.theme.textColor};
+    }
 `;
 
 const teams = [
